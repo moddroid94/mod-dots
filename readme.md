@@ -47,7 +47,7 @@
 - Autostart background apps
 - Autostart fix scripts services & daemons
 - custom plymouth animation and timers
-
+- custom SUPER + ALT + F12 caelestia reload
 # Screenshots:
 
 ![alt text](image.png)

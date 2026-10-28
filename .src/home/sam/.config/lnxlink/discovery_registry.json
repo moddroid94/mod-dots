@@ -1,0 +1,136 @@
+{
+  "boot_time": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_boot_time/config"
+    ]
+  },
+  "brightness": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/number/lnxlink/DESKTOP-Linux_brightness_phl_phl_276e6_zq01640003839/config",
+      "homeassistant/number/lnxlink/DESKTOP-Linux_brightness_sam_ls27ag30x_h4pr900129/config"
+    ]
+  },
+  "cpu": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_cpu_load_average/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_cpu_usage/config"
+    ]
+  },
+  "current_user": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_current_users/config"
+    ]
+  },
+  "display_env": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_display_environment/config"
+    ]
+  },
+  "gamepad": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/binary_sensor/lnxlink/DESKTOP-Linux_gamepad_used/config"
+    ]
+  },
+  "gpu": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_gpu_nvidia_0_load/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_gpu_nvidia_0_memory/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_gpu_nvidia_0_temperature/config"
+    ]
+  },
+  "hypr_color": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/text/lnxlink/DESKTOP-Linux_theme_accent/config"
+    ]
+  },
+  "idle": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_idle/config"
+    ]
+  },
+  "lwt": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/binary_sensor/lnxlink/DESKTOP-Linux_lwt/config"
+    ]
+  },
+  "memory": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_memory_available/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_memory_usage/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_memory_used/config"
+    ]
+  },
+  "network": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_network_download/config",
+      "homeassistant/sensor/lnxlink/DESKTOP-Linux_network_upload/config"
+    ]
+  },
+  "notify": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/notify/lnxlink/DESKTOP-Linux_notify/config"
+    ]
+  },
+  "power_profile": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/select/lnxlink/DESKTOP-Linux_power_profile/config"
+    ]
+  },
+  "restart": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/button/lnxlink/DESKTOP-Linux_restart/config"
+    ]
+  },
+  "screen_onoff": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/switch/lnxlink/DESKTOP-Linux_screen_onoff/config"
+    ]
+  },
+  "session_lock": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/switch/lnxlink/DESKTOP-Linux_session_lock/config"
+    ]
+  },
+  "shutdown": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/button/lnxlink/DESKTOP-Linux_shutdown/config"
+    ]
+  },
+  "speaker_used": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/binary_sensor/lnxlink/DESKTOP-Linux_speaker_used/config"
+    ]
+  },
+  "suspend": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/button/lnxlink/DESKTOP-Linux_suspend/config"
+    ]
+  },
+  "systemd": {
+    "stale_topics": [],
+    "topics": [
+      "homeassistant/switch/lnxlink/DESKTOP-Linux_systemd_tailscaled/config",
+      "homeassistant/switch/lnxlink/DESKTOP-Linux_systemd_user_syncthing/config"
+    ]
+  }
+}
