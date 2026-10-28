@@ -1,0 +1,157 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": true,
+            "showOnHover": false
+        },
+        "clock": {
+            "background": true,
+            "showDate": true
+        },
+        "entries": [
+            {
+                "enabled": true,
+                "id": "logo"
+            },
+            {
+                "enabled": true,
+                "id": "workspaces"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "activeWindow"
+            },
+            {
+                "enabled": true,
+                "id": "spacer"
+            },
+            {
+                "enabled": true,
+                "id": "clock"
+            },
+            {
+                "enabled": true,
+                "id": "tray"
+            },
+            {
+                "enabled": true,
+                "id": "plugins"
+            },
+            {
+                "enabled": true,
+                "id": "statusIcons"
+            },
+            {
+                "enabled": true,
+                "id": "power"
+            }
+        ],
+        "persistent": true,
+        "popouts": {
+            "activeWindow": false,
+            "statusIcons": true
+        },
+        "scrollActions": {
+            "brightness": false,
+            "volume": false,
+            "workspaces": true
+        },
+        "showOnHover": false,
+        "statusIcons": [
+            {
+                "enabled": false,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": false,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": false,
+                "id": "battery"
+            }
+        ],
+        "tray": {
+            "background": true,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeTrail": true,
+            "occupiedBg": false,
+            "perMonitor": true,
+            "showUnoccupied": false,
+            "showWindows": true
+        }
+    },
+    "dashboard": {
+        "resourceUpdateInterval": 5000,
+        "showWeather": true
+    },
+    "general": {
+        "idle": {
+            "inhibitWhenAudio": true,
+            "inhibitWhenCharging": false,
+            "lockBeforeSleep": false,
+            "timeouts": [
+                {
+                    "enabled": true,
+                    "idleAction": "hl.dsp.dpms({ action =  enable })",
+                    "inhibitWhenAudio": true,
+                    "inhibitWhenCharging": false,
+                    "respectInhibitors": true,
+                    "returnAction": "hl.dsp.dpms({ action =  disable  })",
+                    "timeout": 5000
+                }
+            ]
+        }
+    },
+    "launcher": {
+        "useFuzzy": {
+            "actions": true,
+            "apps": true,
+            "schemes": true,
+            "variants": true,
+            "wallpapers": true
+        }
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "brightnessIncrement": 0.05,
+        "defaultPlayer": "Music Assistant",
+        "gpuType": "Nvidia",
+        "smartScheme": true,
+        "visualiserBars": 60,
+        "weatherLocation": "Alessandria, Italy, 15121"
+    },
+    "sidebar": {
+        "dragThreshold": 30
+    }
+}

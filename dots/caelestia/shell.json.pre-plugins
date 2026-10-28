@@ -1,0 +1,74 @@
+{
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": false,
+            "showOnHover": false
+        },
+        "persistent": true,
+        "popouts": {
+            "activeWindow": false
+        },
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "lockStatus"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": false,
+                "id": "microphone"
+            },
+            {
+                "enabled": false,
+                "id": "kbLayout"
+            },
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": false,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "battery"
+            }
+        ],
+        "tray": {
+            "background": false
+        }
+    },
+    "dashboard": {
+        "resourceUpdateInterval": 2000,
+        "showWeather": true
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "brightnessIncrement": 0.05,
+        "defaultPlayer": "Music Assistant",
+        "gpuType": "Nvidia",
+        "smartScheme": true,
+        "useFahrenheit": false,
+        "visualiserBars": 60,
+        "weatherLocation": "Alessandria, Italy, 15121"
+    },
+    "general": {
+    	"idle": {
+            "lockBeforeSleep": false,
+            "inhibitWhenAudio": false,
+            "inhibitWhenCharging": false,
+            "timeouts": [
+                {
+                    "timeout": 1000,
+                    "idleAction": "hl.dsp.dpms({ action =  enable })",
+                    "returnAction":  "hl.dsp.dpms({ action =  disable  })"
+                }
+            ]
+    	}
+    }
+}
