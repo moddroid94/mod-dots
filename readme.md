@@ -1,11 +1,11 @@
-## Moddroid dot-files & Scripts
+# Moddroid dot-files & Scripts
 
-Stack Base:
+## Stack Base:
 - CachyOS
 - Hyprland 0.56+
 
 
-User Apps (not included):
+## User Apps (not included):
 - plymouth-theme-cross-hud-git
 - hyprmod
 - caelestia-dots
@@ -24,23 +24,23 @@ User Apps (not included):
 - Butler
 
 
-Scripts:
+## Scripts:
 - dpms-guard (DP Monitor unplug hotifx)
 - fix-ntfs (Fix nvme corruption on bad unmount)
 
-Services:
+## Services:
 - lnxlink.service (delay lnxlink to allow hyprland startup)
 - greetd (hide logs between plymouth and login)
 - plymouth overrides (allow full boot splash animation)
 
-Presets:
+## Presets:
 - Easyeffects Presets
 
-Extras:
+## Extras:
 - Wallpapers Folder
 
 
-Setup Info:
+# Setup Info:
 
 - Custom greetd + caelestia-greeter login 
 - Autostart Music & Home App on custom workspaces
@@ -48,7 +48,7 @@ Setup Info:
 - Autostart fix scripts services & daemons
 - custom plymouth animation and timers
 
-Screenshots:
+# Screenshots:
 
 ![alt text](image.png)
 ![alt text](image-1.png)
