@@ -1,0 +1,23 @@
+{
+  "name": "cachyos-workstation",
+  "log_level": null,
+  "listen_port": null,
+  "player_volume": 25,
+  "player_muted": false,
+  "static_delay_ms": 0.0,
+  "last_server_url": "ws://192.168.178.54:8927/sendspin",
+  "client_id": "cachyos-workstation",
+  "audio_device": "default",
+  "use_mpris": true,
+  "audio_format": null,
+  "use_hardware_volume": null,
+  "hook_set_volume": null,
+  "hook_start": null,
+  "hook_stop": null,
+  "visualizer": false,
+  "manufacturer": null,
+  "product_name": null,
+  "last_played_server_id": "-xNfiRyjBAhkoN_XqXgX8O15lyObnY17W2XNyE5xTgM",
+  "interface": null,
+  "color_mode": null
+}
