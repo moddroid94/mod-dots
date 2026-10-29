@@ -17,6 +17,7 @@ return {
       hl.exec_cmd("flatpak run com.cassidyjames.butler", { workspace = "special:special silent" })
       hl.exec_cmd("/home/sam/.local/bin/Music.Assistant_0.6.8_amd64.AppImage", { workspace = "special:music silent" })
       hl.exec_cmd("/home/sam/.local/bin/Easy_Effects-8.3.0-anylinux-x86_64.AppImage", { workspace = "2 silent" })
+      hl.exec_cmd({ "touch", "/run/user/" .. os.getenv("UID") .. "/caelestia-ready" })
     end, { timeout = 4000, type = "oneshot" })
   end)
 

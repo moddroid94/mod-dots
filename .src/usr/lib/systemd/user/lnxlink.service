@@ -1,16 +1,11 @@
 [Unit]
 Description=LNXlink - Linux integration for Home Assistant
 Documentation=https://bkbilly.gitbook.io/lnxlink
-After=graphical-session.target
-ConditionEnvironment=WAYLAND_DISPLAY
+PartsOf=graphical-session.target
 
 [Service]
 Type=simple
 TimeoutStartSec=30
-ExecStartPre=/bin/sh -c 'for i in $(seq 1 20); do pgrep -f "qs.*caelestia" >/dev/null && break; sleep 1; done'
 ExecStart=/usr/bin/lnxlink -c %h/.config/lnxlink/config.yaml -i
 Restart=on-failure
 RestartSec=10
-
-[Install]
-WantedBy=graphical-session.target
