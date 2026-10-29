@@ -32,7 +32,6 @@ modules:
   - notify
   - power_profile
   - restart
-  - session_lock
   - shutdown
   - suspend
   - systemd
@@ -40,6 +39,7 @@ modules:
 custom_modules: 
   - /home/sam/.config/lnxlink/cust_mod/hypr_color.py
   - /home/sam/.config/lnxlink/cust_mod/hypr_screen.py
+  - /home/sam/.config/lnxlink/cust_mod/hypr_lock.py
 exclude: []
 settings:
   brightness:
