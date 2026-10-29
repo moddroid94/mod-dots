@@ -1,0 +1,5 @@
+{
+  "wallpaper": {
+    "postHook": "caelestia scheme set -v vibrant"
+  }
+}
