@@ -37,9 +37,9 @@ modules:
   - suspend
   - systemd
   - speaker_used
-  - screen_onoff
 custom_modules: 
   - /home/sam/.config/lnxlink/cust_mod/hypr_color.py
+  - /home/sam/.config/lnxlink/cust_mod/hypr_screen.py
 exclude: []
 settings:
   brightness:
