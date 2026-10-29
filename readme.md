@@ -22,6 +22,7 @@
 - localsend
 - lindiskinfo
 - Butler
+- hypr-lens
 
 
 ## Scripts:

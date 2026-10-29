@@ -6,6 +6,7 @@
 /home/sam/.config/hypr
 /home/sam/.config/lnxlink
 /home/sam/.config/sendspin
+/home/sam/.config/hypr-lens
 /home/sam/.config/systemd/user/caelestia-ready.path
 
 /etc/greetd/greetd.conf

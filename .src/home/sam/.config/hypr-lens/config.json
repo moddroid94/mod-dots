@@ -1,0 +1,53 @@
+{
+  "appearance": {
+    "matugenPath": "/home/sam/.local/state/scheme.json",
+    "ripple": {
+      "usePrimaryColor": true,
+      "colorMixRatio": 0.65,
+      "solidRadius": 0.45,
+      "fadeRadius": 0.7
+    }
+  },
+  "screenSnip": {
+    "savePath": "/home/sam/Pictures/Screenshots",
+    "copyAlsoSaves": true
+  },
+  "screenRecord": {
+    "savePath": ""
+  },
+  "ocr": {
+    "useCircleSelection": false
+  },
+  "search": {
+    "imageSearch": {
+      "imageSearchEngineBaseUrl": "https://lens.google.com/uploadbyurl?url=",
+      "useCircleSelection": false
+    }
+  },
+  "regionSelector": {
+    "dragThreshold": 6,
+    "targetRegions": {
+      "windows": true,
+      "layers": true,
+      "content": false,
+      "showLabel": false,
+      "opacity": 0.3,
+      "contentRegionOpacity": 0.8,
+      "selectionPadding": 5
+    },
+    "rect": {
+      "showAimLines": true
+    },
+    "circle": {
+      "strokeWidth": 6,
+      "padding": 10
+    },
+    "annotation": {
+      "useSatty": true
+    },
+    "crop": {
+      "minSize": 20,
+      "handleSize": 12
+    }
+  }
+}

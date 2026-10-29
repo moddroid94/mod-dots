@@ -1,0 +1,182 @@
+# hypr-lens Configuration
+
+Edit `config.json` in this directory to customize hypr-lens behavior.
+Changes take effect immediately - the config is watched and hot-reloaded.
+
+---
+
+## appearance
+
+Theme and visual settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `matugenPath` | `""` | Path to matugen.json for dynamic theming. Empty uses `~/.config/quickshell/matugen.json` |
+
+### appearance.ripple
+
+Button click ripple effect. Adjust these to change how button clicks look.
+
+| Setting | Default | Range | Description |
+|---------|---------|-------|-------------|
+| `usePrimaryColor` | `true` | `true`/`false` | `true` = theme accent color, `false` = subtle gray |
+| `colorMixRatio` | `0.65` | `0.0` - `1.0` | Lower = more visible. `0.0` = max contrast, `1.0` = invisible |
+| `solidRadius` | `0.45` | `0.0` - `1.0` | How far solid color extends before fading |
+| `fadeRadius` | `0.7` | `0.0` - `1.0` | Where the fade completes |
+
+**Presets:**
+```json
+// Punchy & visible
+"ripple": { "usePrimaryColor": true, "colorMixRatio": 0.5, "solidRadius": 0.5, "fadeRadius": 0.8 }
+
+// Subtle & elegant
+"ripple": { "usePrimaryColor": false, "colorMixRatio": 0.75, "solidRadius": 0.3, "fadeRadius": 0.5 }
+
+// Maximum visibility (for testing)
+"ripple": { "usePrimaryColor": true, "colorMixRatio": 0.4, "solidRadius": 0.6, "fadeRadius": 0.9 }
+```
+
+---
+
+## screenSnip
+
+Screenshot settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `savePath` | `""` | Where to save screenshots. Empty = `~/Pictures/hypr-lens` |
+| `copyAlsoSaves` | `false` | If `true`, Copy mode (left-click) also saves to disk. If `false`, only Edit mode (swappy) saves. |
+
+**Behavior:**
+- **Left-click (Copy)**: Copies to clipboard only (unless `copyAlsoSaves` is `true`)
+- **Right-click (Edit)**: Opens swappy for annotation, then saves to `savePath`
+
+**Example:** `"/home/user/Pictures/Screenshots"` or `"~/Pictures/Screenshots"`
+
+---
+
+## screenRecord
+
+Screen recording settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `savePath` | `""` | Where to save recordings. Empty = `~/Videos/hypr-lens` |
+
+**Example:** `"/home/user/Videos/Recordings"`
+
+---
+
+## ocr
+
+Text extraction (OCR) settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `useCircleSelection` | `false` | `true` = circular selection tool, `false` = rectangle |
+
+---
+
+## search.imageSearch
+
+Reverse image search settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `imageSearchEngineBaseUrl` | Google Lens URL | Base URL for reverse image search |
+| `useCircleSelection` | `false` | `true` = circular selection, `false` = rectangle |
+
+**Alternative search engines:**
+```json
+// Google Lens (default)
+"imageSearchEngineBaseUrl": "https://lens.google.com/uploadbyurl?url="
+
+// TinEye
+"imageSearchEngineBaseUrl": "https://tineye.com/search?url="
+
+// Bing Visual Search
+"imageSearchEngineBaseUrl": "https://www.bing.com/images/search?view=detailv2&iss=sbi&q=imgurl:"
+```
+
+---
+
+## regionSelector
+
+Controls the region selection overlay behavior.
+
+### regionSelector.dragThreshold
+
+Pixel dead-zone for the click/drag discriminator. A press-to-release movement within this distance counts as a **click** (selects the whole hovered window/region) instead of a tiny drag rectangle.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `dragThreshold` | `6` | Dead-zone in pixels; movement beyond this on either axis becomes a drag |
+
+Details:
+
+- The tolerance is **per-axis** (`abs(dragDiffX) > t || abs(dragDiffY) > t`), not a radial distance — a diagonal drift can reach ~`t × √2` px and still count as a click.
+- The comparison is strict `>`: a drift exactly equal to `t` is still a click (with the default, 6 px = click, 7 px = drag).
+- Values below `0` are clamped to `0`.
+- `0` **disables the dead-zone** — the explicit opt-out, restoring the original per-pixel sensitivity where any jitter registers as a drag.
+- The default `6` is tuned for mouse input. Raise it if you still get tiny-rectangle slivers on a trackpad or stylus — touch/pen input jitters more than a mouse.
+- **Circle mode ignores this setting** (always uses `0`): every circle gesture *is* the drawn shape, so there is no whole-target fallback to protect and even the smallest circle must still be drawn.
+
+### regionSelector.targetRegions
+
+Auto-detection of clickable regions (windows, content areas).
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `windows` | `true` | Auto-detect window boundaries |
+| `layers` | `false` | Detect Hyprland layers (panels, bars) |
+| `content` | `true` | Use OpenCV to detect content within windows |
+| `showLabel` | `false` | Show labels on detected regions |
+| `opacity` | `0.3` | Highlight overlay opacity (0.0-1.0) |
+| `contentRegionOpacity` | `0.8` | Opacity for content-detected regions |
+| `selectionPadding` | `5` | Extra pixels around detected regions |
+
+### regionSelector.rect
+
+Rectangle selection tool settings.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `showAimLines` | `true` | Show crosshair lines when drawing |
+
+### regionSelector.circle
+
+Freehand ("circle") selection tool settings — the config key keeps its historical name.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `strokeWidth` | `6` | Circle outline thickness |
+| `padding` | `10` | Extra space around selection |
+
+### regionSelector.annotation
+
+Annotation tool used by the **Edit** action.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `useSatty` | `true` | `true` = annotate with [satty](https://github.com/gabm/Satty) (preferred); `false` = use swappy. Falls back to swappy automatically if satty isn't installed. |
+
+With satty, **Enter** (or the copy/save toolbar buttons) keeps the edit — copying to the clipboard and, when `screenSnip.copyAlsoSaves` is `true`, saving into the hypr-lens save dir — while **Escape** discards it. satty is configured via the bundled `~/.config/hypr-lens/satty.toml` (edit it to taste; it never touches your own `~/.config/satty`). The swappy fallback is a plain hand-off — swappy uses its own Save/Copy buttons and its own save directory.
+
+### regionSelector.crop
+
+Crop mode: an adjustable crop editor as an alternative to the default instant capture. Toggle it with the **C** key (hardcoded, per monitor) or the Instant/Crop toolbar tabs. In Crop mode, releasing a selection opens an editor with 8 resize handles and interior move-drag instead of capturing immediately; **Enter** or **Space** (or the confirm button) captures the adjusted region, **Escape** goes back to drawing. The overlay always opens in Instant mode.
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| `minSize` | `20` | Minimum crop width/height in pixels, enforced per axis while resizing |
+| `handleSize` | `12` | Visual size of the resize handles in pixels |
+
+Values are sanitized on use: `minSize` is clamped to at least `1` and `handleSize` to at least `4`, so zero/negative values can't collapse the crop rect or make the handles ungrabbable.
+
+---
+
+## Tips
+
+- Empty string `""` for path settings = use default behavior
+- Config hot-reloads automatically - no restart needed
+- Both absolute paths (`/home/user/...`) and tilde paths (`~/...`) are supported
