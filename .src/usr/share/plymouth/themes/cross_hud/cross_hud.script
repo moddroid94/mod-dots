@@ -39,10 +39,13 @@ flyingman_sprite.SetY(Window.GetY() + (Window.GetHeight(0) / 2 - flyingman_image
 progress = 0;
 
 fun refresh_callback ()
-  {
-    flyingman_sprite.SetImage(flyingman_image[Math.Int(progress / 2) % 210]);
-    progress++;
-  }
+{
+    if (progress < 210 * 2) {
+        flyingman_sprite.SetImage(flyingman_image[Math.Int(progress / 2) % 210]);
+        progress++;
+    }
+    # else: do nothing — last frame stays on screen
+}
 
 Plymouth.SetRefreshFunction (refresh_callback);
 
