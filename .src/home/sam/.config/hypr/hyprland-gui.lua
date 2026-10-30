@@ -4,9 +4,15 @@
 hl.config({
     decoration = {
         blur = {
-            passes = 3,
-            size = 9,
+            brightness = 0.8,
+            contrast = 2.0,
+            ignore_opacity = true,
+            noise = 0.0,
+            passes = 2,
+            size = 13,
             special = true,
+            vibrancy = 0.35,
+            vibrancy_darkness = 0.35,
         },
     },
     general = {

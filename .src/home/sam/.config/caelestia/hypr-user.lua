@@ -23,6 +23,11 @@ hl.window_rule({
     float = true,
     center = true,
 })
+hl.layer_rule({
+    match = { namespace = "atlas" },
+    blur = true,
+    ignore_alpha = 0.5, -- Adjust opacity threshold for blur application
+})
 -- blur
 hl.layer_rule({
   match = { namespace = "vicinae" },

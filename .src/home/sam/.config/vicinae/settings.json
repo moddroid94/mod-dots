@@ -23,6 +23,12 @@
    "telemetry": {
       "system_info": false
    },
+   "fallbacks": [
+      "shortcuts:sct-960b01ed1e25",
+      "@knoopx/store.vicinae.systemd:services",
+      "shortcuts:sct-b74a8f8b107c",
+      "files:search"
+   ],
    "providers": {
       "@nikbpetrov/store.vicinae.it-tools": {
          "preferences": {
