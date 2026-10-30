@@ -116,6 +116,11 @@
         "showWeather": true
     },
     "general": {
+        "apps": {
+            "explorer": [
+                "atlas"
+            ]
+        },
         "idle": {
             "inhibitWhenAudio": true,
             "inhibitWhenCharging": false,
@@ -147,11 +152,11 @@
         "brightnessIncrement": 0.05,
         "defaultPlayer": "Music Assistant",
         "gpuType": "Nvidia",
-        "smartScheme": true,
+        "smartScheme": false,
         "visualiserBars": 60,
         "weatherLocation": "Alessandria, Italy, 15121"
     },
     "sidebar": {
-        "dragThreshold": 30
+        "dragThreshold": 20
     }
 }

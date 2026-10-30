@@ -23,6 +23,8 @@
 - lindiskinfo
 - Butler
 - hypr-lens
+- vicinae-bin
+- astra-atlas
 
 
 ## Scripts:

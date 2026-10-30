@@ -4,7 +4,7 @@ return {
   -- Changing default apps:
   browser          = "brave",
   editor           = "vscodium",
-
+  fileExplorer     = "atlas --platformtheme qt6ct",
   singleWindowGapsOut        = 15,
 
   
@@ -13,6 +13,8 @@ return {
     hl.timer(function()
       hl.exec_cmd("localsend --hidden")
       hl.exec_cmd("keepassxc")
+      hl.exec_cmd("lindiskinfo")
+      hl.exec_cmd("vicinae server")
       hl.exec_cmd("/home/sam/.local/bin/dpms-guard.sh")
       hl.exec_cmd("flatpak run com.cassidyjames.butler", { workspace = "special:special silent" })
       hl.exec_cmd("/home/sam/.local/bin/Music.Assistant_0.6.8_amd64.AppImage", { workspace = "special:music silent" })
