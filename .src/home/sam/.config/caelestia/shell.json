@@ -152,7 +152,7 @@
         "brightnessIncrement": 0.05,
         "defaultPlayer": "Music Assistant",
         "gpuType": "Nvidia",
-        "smartScheme": false,
+        "smartScheme": true,
         "visualiserBars": 60,
         "weatherLocation": "Alessandria, Italy, 15121"
     },

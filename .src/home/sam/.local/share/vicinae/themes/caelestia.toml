@@ -1,0 +1,23 @@
+[meta]
+version = 1
+name = "Caelestia Dynamic"
+description = "Auto-generated from Caelestia wallpaper scheme."
+variant = "dark"
+inherits = "vicinae-dark"
+
+[colors.core]
+background = "180b00"
+foreground = "ffe0c0"
+secondary_background = "281500"
+border = "624114"
+accent = "ffa44e"
+
+[colors.accents]
+blue = "ffa2bd"
+green = "ffdaa6"
+magenta = "ffd4c2"
+orange = "ffc190"
+purple = "ffac8f"
+red = "fe9b60"
+yellow = "ffeee1"
+cyan = "b3d27e"

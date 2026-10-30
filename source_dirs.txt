@@ -1,8 +1,10 @@
 /home/sam/.config/caelestia
 /home/sam/.local/share/easyeffects
+/home/sam/.local/share/vicinae/themes
 /home/sam/.local/bin/dpms-guard.sh
 /home/sam/.local/bin/fix_ntfs.sh
 /home/sam/.local/bin/reload_caelestia.sh
+/home/sam/.local/bin/caelestia-vicinae-theme.py
 /home/sam/.config/hypr
 /home/sam/.config/lnxlink
 /home/sam/.config/sendspin
