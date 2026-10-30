@@ -14,6 +14,14 @@ hl.config({
             input_methods     = vars.blurInputMethods,
             size              = vars.blurSize,
             passes            = vars.blurPasses,
+            variant = "acrylic",
+            acrylic = {
+                refraction = 10,
+                bulb       = 20,
+                clarity    = 0.02,
+                tint       = 0x2c00FFFF,
+                aberration = 0.2,
+            },
         },
 
         shadow = {
