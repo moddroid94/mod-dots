@@ -4,7 +4,7 @@ return {
   -- Changing default apps:
   browser          = "brave",
   editor           = "vscodium",
-  fileExplorer     = "atlas --platformtheme qt6ct",
+  fileExplorer     = "dfiles",
   singleWindowGapsOut        = 15,
 
   

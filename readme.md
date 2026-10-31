@@ -29,7 +29,8 @@
 - hypr-lens
 - satty
 - vicinae-bin
-- astra-atlas
+- dfiles
+- dcal
 - awww
 - vdirsyncer
 

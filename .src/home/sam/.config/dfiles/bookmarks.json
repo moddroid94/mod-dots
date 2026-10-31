@@ -1,0 +1,60 @@
+{
+ "version": 2,
+ "bookmarks": [
+  {
+   "path": "/home/sam/Desktop",
+   "label": "Desktop",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam",
+   "label": "sam",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Documents",
+   "label": "Documents",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Downloads",
+   "label": "Downloads",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Music",
+   "label": "Music",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Pictures",
+   "label": "Pictures",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Videos",
+   "label": "Videos",
+   "icon": ""
+  },
+  {
+   "path": "trash:///",
+   "label": "trash",
+   "icon": ""
+  },
+  {
+   "path": "/home/sam/Projects",
+   "label": "Projects",
+   "icon": ""
+  },
+  {
+   "path": "/run/user/1000/gvfs/sftp:host=192.168.178.21",
+   "label": "Hydra",
+   "icon": ""
+  },
+  {
+   "path": "recent:///",
+   "label": "recent",
+   "icon": ""
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "primary": "#58bfff",
+  "primaryText": "#003854",
+  "primaryContainer": "#00b3fe",
+  "secondary": "#49acff",
+  "surface": "#000f1f",
+  "surfaceText": "#d5e7ff",
+  "surfaceVariant": "#002844",
+  "surfaceVariantText": "#8faed1",
+  "background": "#000f1f",
+  "backgroundText": "#d5e7ff",
+  "outline": "#597899",
+  "surfaceContainerLowest": "#000000",
+  "surfaceContainerLow": "#001427",
+  "surfaceContainer": "#001b31",
+  "surfaceContainerHigh": "#00213a",
+  "surfaceContainerHighest": "#002844",
+  "error": "#ff716c",
+  "surfaceTint": "#58bfff"
+}
