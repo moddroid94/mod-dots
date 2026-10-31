@@ -1,5 +1,5 @@
 {
   "wallpaper": {
-    "postHook": "caelestia scheme set -v vibrant; ~/.local/bin/caelestia-vicinae-theme.py"
+    "postHook": "caelestia scheme set -v vibrant; ~/.local/bin/caelestia-vicinae-theme.py; awww img \"$WALLPAPER_PATH\" --transition-type any --transition-step 90 --transition-fps 120"
   }
 }

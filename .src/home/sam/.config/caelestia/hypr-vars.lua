@@ -12,6 +12,7 @@ return {
   hl.on("hyprland.start", function ()
     hl.timer(function()
       hl.exec_cmd("localsend --hidden")
+      hl.exec_cmd("awww-daemon")
       hl.exec_cmd("keepassxc")
       hl.exec_cmd("lindiskinfo")
       hl.exec_cmd("vicinae server")

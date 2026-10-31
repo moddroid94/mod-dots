@@ -15,12 +15,13 @@ hl.config({
             size              = vars.blurSize,
             passes            = vars.blurPasses,
             variant = "acrylic",
+            proportional = true,
             acrylic = {
-                refraction = 10,
-                bulb       = 20,
-                clarity    = 0.02,
-                tint       = 0x2c00FFFF,
-                aberration = 0.2,
+                refraction = 29,
+                bulb       = 9,
+                clarity    = 0.01,
+                tint       = 0x00FFFFFF,
+                aberration = 0.15,
             },
         },
 

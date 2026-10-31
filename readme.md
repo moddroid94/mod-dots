@@ -25,6 +25,7 @@
 - hypr-lens
 - vicinae-bin
 - astra-atlas
+- awww
 
 
 ## Scripts:

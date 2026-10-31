@@ -1,8 +1,8 @@
 {
     "appearance": {
         "transparency": {
-            "enabled": true,
-            "base": 0.6
+            "base": 0.6,
+            "enabled": true
         }
     },
     "bar": {
@@ -106,9 +106,9 @@
         "workspaces": {
             "activeIndicator": true,
             "activeTrail": true,
-            "occupiedBg": false,
+            "occupiedBg": true,
             "perMonitor": true,
-            "showUnoccupied": false,
+            "showUnoccupied": true,
             "showWindows": true
         }
     },
@@ -137,6 +137,26 @@
                     "timeout": 5000
                 }
             ]
+        }
+    },
+    "background": {
+        "enabled": true,
+        "wallpaperEnabled": false,
+        "desktopClock": {
+            "enabled": true,
+            "scale": 1.0,
+            "position": "bottom-right",
+            "invertColors": false,
+            "background": {
+                "enabled": false,
+                "opacity": 0.7,
+                "blur": true
+            },
+            "shadow": {
+                "enabled": true,
+                "opacity": 0.7,
+                "blur": 0.4
+            }
         }
     },
     "launcher": {
