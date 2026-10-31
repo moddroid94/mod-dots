@@ -14,6 +14,23 @@ hl.bind("SUPER + SHIFT + X", hl.dsp.global("quickshell:regionOcr"))
 hl.bind("SUPER + Space", hl.dsp.exec_cmd("vicinae toggle"))
 
 hl.window_rule({
+    match = { class = "^(codium)$" },
+    opacity = 0.9,
+})
+hl.window_rule({
+    match = { class = "^(brave-browser)$" },
+    opacity = 1,
+})
+hl.window_rule({
+    match = { class = "^(atlas)$" },
+    opacity = 0.85,
+})
+hl.window_rule({
+    match = { class = "^(com.cassidyjames.butler)$" },
+    opacity = 0.9,
+})
+
+hl.window_rule({
     match = { class = "^(org.gnome.Loupe)$" },
     float = true,
     center = true,

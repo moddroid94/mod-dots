@@ -18,7 +18,6 @@
 /etc/systemd/system/plymouth-poweroff.service.d
 /etc/systemd/system/plymouth-quit.service.d
 /etc/systemd/system/plymouth-reboot.service.d
-/etc/systemd/system/sendspin.service
 /usr/lib/systemd/user/lnxlink.service
 /usr/share/plymouth/themes/cross_hud
 
