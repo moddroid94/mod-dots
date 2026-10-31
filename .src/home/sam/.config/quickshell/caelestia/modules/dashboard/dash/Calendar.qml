@@ -34,38 +34,7 @@ CustomMouseArea {
     Process {
         id: calendarAppLauncher
 
-        command: [
-            "sh", "-c",
-            `
-            detach_run() {
-                if command -v systemd-run >/dev/null 2>&1; then
-                    systemd-run --user --quiet "$@" >/dev/null 2>&1
-                elif command -v setsid >/dev/null 2>&1; then
-                    setsid -f "$@" >/dev/null 2>&1
-                else
-                    nohup "$@" >/dev/null 2>&1 &
-                fi
-            }
-
-            APP="$1"
-            if [ -z "$APP" ]; then
-                for candidate in gnome-calendar merkuro-calendar kalendar thunderbird evolution korganizer; do
-                    if command -v "$candidate" >/dev/null 2>&1; then
-                        APP="$candidate"
-                        break
-                    fi
-                done
-            fi
-
-            if [ -n "$APP" ]; then
-                detach_run sh -c "$APP"
-            else
-                detach_run xdg-open "calendar://"
-            fi
-            `,
-            "--",
-            (typeof Config !== "undefined" && Config.calendarApp) ? Config.calendarApp : ""
-        ]
+        command: ["sh", "-c", "dcal"]
         running: false
     }
 

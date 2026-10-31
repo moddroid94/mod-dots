@@ -17,7 +17,7 @@
 /home/sam/.config/astra-atlas
 /home/sam/.config/vicinae
 /home/sam/.config/systemd/user/caelestia-ready.path
-/home/sam/.config/vdirsyncer
+/home/sam/.config/vdirsyncer/config
 
 
 /etc/greetd/greetd.conf

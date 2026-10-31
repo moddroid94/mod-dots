@@ -33,6 +33,13 @@
                 "color": "terminal.ansiRed"
             },
             "problemMatcher": []
+        },
+        {
+            "label": "Strip Passwords",
+            "type": "process",
+            "command": "python3",
+            "args": ["./strip_passwords.py"],
+            "problemMatcher": []
         }
     ]
 }

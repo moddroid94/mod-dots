@@ -6,7 +6,7 @@ mqtt:
   clear_on_off: true
   auth:
     user: samuel
-    pass: "..."
+    pass: ""
     tls: false
     keyfile: ''
     certfile: ''

@@ -1,0 +1,2 @@
+.src/home/sam/.config/lnxlink/config.yaml
+.src/home/sam/.config/vdirsyncer/config
