@@ -31,7 +31,7 @@
 - vicinae-bin
 - astra-atlas
 - awww
-
+- vdirsyncer
 
 ## Scripts:
 - dpms-guard (DP Monitor unplug hotifx)
@@ -70,6 +70,7 @@
 - custom SUPER + ALT + F12 caelestia reload
 - custom decoration.lua (applying to shell wasn't working)
 - custom lnxlink modules for hyprland
+- custom calendar module with events highlights from ics events
 
 # Other Screenshots:
 ![alt text](image-3.png)

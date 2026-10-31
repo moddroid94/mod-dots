@@ -52,3 +52,9 @@ hl.layer_rule({
   blur = false,
   ignore_alpha = 0,
 })
+hl.window_rule({
+    name = "float-cal-event",
+    match = { class = "^(thunderbird)$", initial_title = "^$" },
+    float = true,
+    center = true,
+})
