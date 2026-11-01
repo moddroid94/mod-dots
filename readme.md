@@ -29,8 +29,8 @@
 - hypr-lens
 - satty
 - vicinae-bin
-- dfiles
-- dcal
+- dux-files-bin
+- dux-calendar-bin
 - awww
 - vdirsyncer
 
