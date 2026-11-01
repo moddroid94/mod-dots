@@ -34,7 +34,7 @@
     ],
     "searchHidden": false,
     "showHidden": true,
-    "showSystemPartitions": false,
+    "showSystemPartitions": true,
     "sidebarCollapsed": false,
     "springBounce": 1,
     "terminal": "foot",
