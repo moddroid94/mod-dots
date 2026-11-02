@@ -1,0 +1,9 @@
+{
+  "syncshell": {
+    "enabled": true
+  },
+  "dankHooks": {
+    "enabled": true,
+    "wallpaperPath": "/home/sam/.config/dms/postwall.sh"
+  }
+}

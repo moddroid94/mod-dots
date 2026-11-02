@@ -23,7 +23,7 @@
     "listTyping": "jump",
     "mountOnClick": true,
     "networkThumbnails": false,
-    "openLocationIn": "current",
+    "openLocationIn": "tab",
     "presetTheme": "purple",
     "radiusStrength": 50,
     "recentFiles": true,

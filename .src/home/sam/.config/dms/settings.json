@@ -87,6 +87,10 @@
           "id": "launcherButton",
           "enabled": false
         },
+        {
+          "id": "cpuUsage",
+          "enabled": true
+        },
         "workspaceSwitcher",
         {
           "id": "runningApps",
@@ -106,17 +110,25 @@
         {
           "id": "systemTray",
           "enabled": true,
-          "overflowMode": "bar",
+          "overflowMode": "always",
           "trayPopupSingleLine": true,
-          "trayAutoOverflow": true,
-          "trayIconSpacing": 4,
-          "trayMaxVisibleItems": 4
+          "trayAutoOverflow": false,
+          "trayIconSpacing": 1,
+          "trayMaxVisibleItems": 2,
+          "trayUseInlineExpansion": false
+        },
+        {
+          "id": "syncshell",
+          "enabled": true
         },
         {
           "id": "clipboard",
-          "enabled": true
+          "enabled": false
         },
-        "cpuUsage",
+        {
+          "id": "cpuUsage",
+          "enabled": false
+        },
         {
           "id": "memUsage",
           "enabled": false
@@ -246,8 +258,8 @@
   "currentThemeCategory": "dynamic",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-vibrant",
-  "popupTransparency": 0.47,
-  "foregroundLayerTransparency": 0.55,
+  "popupTransparency": 0.5,
+  "foregroundLayerTransparency": 0.58,
   "blurBorderEnabled": true,
   "blurEnabled": true,
   "blurBorderSeeded": true,
@@ -255,7 +267,7 @@
   "blurStrength": 62,
   "fontFamily": "Google Sans Flex Medium",
   "fontWeight": 300,
-  "motionEffect": 2,
+  "motionEffect": 0,
   "builtInPluginSettings": {
     "dms_qr_generator": {
       "trigger": "qrg"
@@ -302,7 +314,7 @@
     }
   },
   "focusFollowsMouse": 1,
-  "mouseAccelSpeed": -0.2,
+  "mouseAccelSpeed": -0.4,
   "mouseScrollMethod": "on-button-down",
   "launcherStyle": "full",
   "dashTabs": [
@@ -341,14 +353,17 @@
   "focusRingEnabled": true,
   "hyprlandLayoutGapsOverride": 7,
   "hyprlandLayoutGapsOutOverride": 10,
-  "hyprlandWindowOpacity": 100,
+  "hyprlandWindowOpacity": 97,
   "hyprlandGlowEnabled": false,
   "dashOptions": {
     "calendar": {
       "weekends": true
+    },
+    "weather": {
+      "city": true
     }
   },
-  "systemTrayIconTintMode": "secondary",
+  "systemTrayIconTintMode": "none",
   "launcherUseOverlayLayer": false,
   "dankLauncherV2Size": "compact",
   "dankLauncherV2BorderEnabled": false,
@@ -525,14 +540,15 @@
       "row": 6
     }
   ],
-  "springBounce": 0,
-  "animationDuration": 300,
+  "springBounce": 1,
+  "animationDuration": 399,
   "textRenderType": 0,
   "widgetBackgroundColor": "primaryContainer",
   "osdPositionOverrides": {
     "volume": 7,
     "brightness": 7,
-    "mediaVolume": 4
+    "mediaVolume": 4,
+    "mediaPlayback": 4
   },
   "osdPosition": 5,
   "osdAlwaysShowValue": false,
@@ -543,5 +559,14 @@
   "terminalPalette": "medium",
   "notepadAutoSave": true,
   "blurForegroundLayers": true,
-  "floatingWindowSyncGlobal": true
+  "floatingWindowSyncGlobal": true,
+  "systemTrayIconTintSaturation": 52,
+  "hostSurfaceColor": "default",
+  "iconThemeDark": "System Default",
+  "wallpaperBackgroundColorMode": "black",
+  "hyprlandBlurVariant": "kawase",
+  "hyprlandTilingLayout": "",
+  "fadeToLockEnabled": true,
+  "weatherEnabled": true,
+  "matugenTemplateFoot": true
 }

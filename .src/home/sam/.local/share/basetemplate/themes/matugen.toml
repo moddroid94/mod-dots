@@ -1,0 +1,26 @@
+accent                #5dc9ff
+cursor                #d1e8ff
+cursor_text_color     #8bafcf
+
+foreground            #d1e8ff
+background            #00101c
+selection_foreground  #002d46
+selection_background  #89caff
+url_color             #5dc9ff
+
+color0   #00101c
+color1   #ff4c85
+color2   #5dff6f
+color3   #fff44c
+color4   #39b4f2
+color5   #00bdfd
+color6   #5dc9ff
+color7   #ebfaff
+color8   #373f42
+color9   #ff85ac
+color10  #8dff9a
+color11  #fff88d
+color12  #75d1ff
+color13  #8dd9ff
+color14  #b6e6ff
+color15  #f6fcff

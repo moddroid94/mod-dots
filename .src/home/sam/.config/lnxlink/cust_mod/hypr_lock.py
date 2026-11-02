@@ -6,9 +6,8 @@ import subprocess
 from shutil import which
 from typing import Any, Dict, Optional, Tuple
 
-from lnxlink.modules.scripts.helpers import syscommand
-
 import caelestia
+from lnxlink.modules.scripts.helpers import syscommand
 
 logger = logging.getLogger("lnxlink")
 
@@ -91,7 +90,7 @@ class Addon:
         if not self.session_id:
             return None, ""
         if "hyprland" in self.desktop_env:
-            command = ["qs", "-c", "caelestia", "ipc", "call", "lock", "isLocked"]
+            command = ["dms", "ipc", "call", "lock", "isLocked"]
             value = self._run_command(command)
             return self._parse_bool(value.strip()), value
         stdout, _, _ = syscommand(

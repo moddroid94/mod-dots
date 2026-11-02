@@ -4,6 +4,8 @@
 hl.on("hyprland.start", function()
 	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
 	hl.exec_cmd("systemctl --user start hyprland-session.target")
+	hl.exec_cmd("sh -c 'touch /run/user/$(id -u)/caelestia-ready'")
+	hl.exec_cmd("/home/sam/.local/bin/dpms-guard.sh")
 end)
 -- DMS_STARTUP_END
 

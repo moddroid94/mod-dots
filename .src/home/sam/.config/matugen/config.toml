@@ -1,0 +1,5 @@
+[config]
+
+[templates.mytemplate]
+input_path = '/home/sam/.config/matugen/templates/basetemplate.toml'
+output_path = '/home/sam/.local/share/basetemplate/themes/matugen.toml'
