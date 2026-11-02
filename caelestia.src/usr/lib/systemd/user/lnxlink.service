@@ -1,0 +1,11 @@
+[Unit]
+Description=LNXlink - Linux integration for Home Assistant
+Documentation=https://bkbilly.gitbook.io/lnxlink
+PartsOf=graphical-session.target
+
+[Service]
+Type=simple
+TimeoutStartSec=30
+ExecStart=/usr/bin/lnxlink -c %h/.config/lnxlink/config.yaml -i
+Restart=on-failure
+RestartSec=10

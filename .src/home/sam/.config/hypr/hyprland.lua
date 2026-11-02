@@ -1,75 +1,89 @@
-local home   = os.getenv("HOME")
-local hypr   = home .. "/.config/hypr"
-package.path = package.path .. ";" .. home .. "/.config/caelestia/?.lua"
+-- Hyprland configuration (Lua) — https://wiki.hypr.land/Configuring/Start/
 
--- Create a file if it doesn't exist, optionally with initial content
-local function maybe_create(file, content)
-    local f = io.open(file)
+-- DMS_STARTUP_BEGIN
+hl.on("hyprland.start", function()
+	hl.exec_cmd("dbus-update-activation-environment --systemd --all")
+	hl.exec_cmd("systemctl --user start hyprland-session.target")
+end)
+-- DMS_STARTUP_END
 
-    if f then
-        f:close()
-        return
-    end
+hl.config({
+	input = {
+		-- empty inherits XKB_DEFAULT_LAYOUT (libxkbcommon), falls back to "us"
+		kb_layout = "",
+		numlock_by_default = true,
+		follow_mouse = 0,
+		-- dms/input.lua is required later and wins per key
+		touchpad = {
+			tap_to_click = true,
+			natural_scroll = true,
+		},
+	},
+	general = {
+		gaps_in = 5,
+		gaps_out = 5,
+		border_size = 2,
+		layout = "dwindle",
+	},
+	decoration = {
+		rounding = 12,
+		active_opacity = 1.0,
+		inactive_opacity = 1.0,
+		shadow = {
+			enabled = true,
+			range = 30,
+			render_power = 4,
+			offset = "0 5",
+			color = "rgba(00000070)",
+		},
+	},
+	misc = {
+		disable_hyprland_logo = true,
+		disable_splash_rendering = true,
+	},
+	dwindle = {
+		preserve_split = true,
+	},
+	master = {
+		mfact = 0.5,
+	},
+})
 
-    f = io.open(file, "w")
-    if f then
-        if content then f:write(content) end
-        f:close()
-    end
-end
+hl.animation({ leaf = "windowsIn", enabled = true, speed = 3, bezier = "default" })
+hl.animation({ leaf = "windowsOut", enabled = true, speed = 3, bezier = "default" })
+hl.animation({ leaf = "workspaces", enabled = true, speed = 5, bezier = "default" })
+hl.animation({ leaf = "windowsMove", enabled = true, speed = 4, bezier = "default" })
+hl.animation({ leaf = "fade", enabled = true, speed = 3, bezier = "default" })
+hl.animation({ leaf = "border", enabled = true, speed = 3, bezier = "default" })
 
--- Copy src to dst, but only if dst doesn't already exist
-local function maybe_copy(src, dst)
-    local out = io.open(dst)
-    if out then
-        out:close()
-        return
-    end
+hl.window_rule({ match = { class = "^(org\\.wezfurlong\\.wezterm)$" }, tile = true })
+hl.window_rule({ match = { class = "^(org\\.gnome\\.)" }, rounding = 12 })
+hl.window_rule({ match = { class = "^(gnome-control-center)$" }, tile = true })
+hl.window_rule({ match = { class = "^(pavucontrol)$" }, tile = true })
+hl.window_rule({ match = { class = "^(nm-connection-editor)$" }, tile = true })
+hl.window_rule({ match = { class = "^(org\\.gnome\\.Calculator)$" }, float = true })
+hl.window_rule({ match = { class = "^(gnome-calculator)$" }, float = true })
+hl.window_rule({ match = { class = "^(galculator)$" }, float = true })
+hl.window_rule({ match = { class = "^(blueman-manager)$" }, float = true })
+hl.window_rule({ match = { class = "^(xdg-desktop-portal)$" }, float = true })
+hl.window_rule({
+	match = { class = "^(steam)$", title = "^(notificationtoasts)" },
+	no_initial_focus = true,
+	pin = true,
+})
+hl.window_rule({
+	match = { class = "^(firefox)$", title = "^(Picture-in-Picture)$" },
+	float = true,
+})
+hl.window_rule({ match = { class = "^(zoom)$" }, float = true })
+hl.layer_rule({ match = { namespace = "^(quickshell)$" }, no_anim = true })
+hl.layer_rule({ match = { namespace = "^dms:.*" }, no_anim = true })
 
-    local input = io.open(src, "r")
-    if not input then return end
-
-    out = io.open(dst, "w")
-    if out then
-        out:write(input:read("*a"))
-        out:close()
-    end
-    input:close()
-end
-
--- Maybe set current colours to defaults
-maybe_copy(hypr .. "/scheme/default.lua", hypr .. "/scheme/current.lua")
-
--- User variables
-maybe_create(home .. "/.config/caelestia/hypr-vars.lua", "return {}\n")
-local overrides = require("hypr-vars")
-if type(overrides) == "table" then
-    local vars = require("variables")
-    for k, v in pairs(overrides) do
-        vars[k] = v
-    end
-end
-
--- Default monitor conf
-hl.monitor({ output = "DP-1", mode = "1920x1080@144", position = "0x0", scale = 1 })
-hl.monitor({ output = "HDMI-A-1", mode = "1920x1080", position = "1920x0", scale = 1 })
-
--- Configs
-require("hyprland.env")
-require("hyprland.general")
-require("hyprland.input")
-require("hyprland.misc")
-require("hyprland.animations")
-require("hyprland.decoration")
-require("hyprland.group")
-require("hyprland.execs")
-require("hyprland.rules")
-require("hyprland.gestures")
-require("hyprland.keybinds")
-
--- User configs
-maybe_create(home .. "/.config/caelestia/hypr-user.lua")
-require("hypr-user")
-
--- HyprMod managed settings
-require("hyprland-gui")
+require("dms.colors")
+require("dms.outputs")
+require("dms.layout")
+require("dms.cursor")
+require("dms.input")
+require("dms.binds")
+require("dms.binds-user")
+require("dms.windowrules")

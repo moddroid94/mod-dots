@@ -2,7 +2,7 @@
     "animationDuration": 250,
     "clickToOpen": "double",
     "closeBehavior": "hide",
-    "colorSource": "custom",
+    "colorSource": "auto",
     "confirmTrash": true,
     "customThemeFile": "/home/sam/.config/dankcal/matugen-theme.json",
     "defaultSort": "name",

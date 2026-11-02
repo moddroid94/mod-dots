@@ -1,33 +1,34 @@
-/home/sam/.config/caelestia
-
-/home/sam/.config/quickshell/caelestia/modules/dashboard
-/home/sam/.config/quickshell/caelestia/services
-
-/home/sam/.local/share/easyeffects
-/home/sam/.local/share/vicinae/themes
-/home/sam/.local/bin/dpms-guard.sh
-/home/sam/.local/bin/fix_ntfs.sh
-/home/sam/.local/bin/reload_caelestia.sh
-/home/sam/.local/bin/caelestia-vicinae-theme.py
-/home/sam/.local/bin/caelestia-to-dankcal.py
+/home/sam/.config/dms
+/home/sam/.config/dfiles
+/home/sam/.config/dsearch
+/home/sam/.config/dankcal
 
 /home/sam/.config/hypr
+
+/home/sam/.local/bin/dpms-guard.sh
+/home/sam/.local/bin/fix_ntfs.sh
+
+
+/home/sam/.local/share/easyeffects
 /home/sam/.config/lnxlink
 /home/sam/.config/sendspin
 /home/sam/.config/hypr-lens
-/home/sam/.config/dankcal
-/home/sam/.config/dfiles
-/home/sam/.config/vicinae
+
+
 /home/sam/.config/systemd/user/caelestia-ready.path
 /home/sam/.config/vdirsyncer/config
 
 
-/etc/greetd/greetd.conf
-/etc/caelestia-greeter/local.lua
+/etc/greetd
+/var/cache/dms-greeter/.local/state
+/var/cache/dms-greeter/settings.json
+/var/cache/dms-greeter/session.json
+/var/cache/dms-greeter/memory.json
+/var/cache/dms-greeter/colors.json
 /etc/systemd/system/plymouth-poweroff.service.d
 /etc/systemd/system/plymouth-quit.service.d
 /etc/systemd/system/plymouth-reboot.service.d
 /usr/lib/systemd/user/lnxlink.service
-/usr/share/plymouth/themes/cross_hud
+/usr/share/plymouth/themes/hexagon_dots
 
 /home/sam/Pictures/Wallpapers
