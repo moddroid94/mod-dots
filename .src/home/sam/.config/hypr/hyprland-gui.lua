@@ -7,17 +7,19 @@ hl.config({
             brightness = 0.98,
             contrast = 1.5,
             ignore_opacity = true,
-            noise = 0.07,
+            noise = 0.06,
             passes = 3,
             popups = true,
             size = 1,
             special = true,
             vibrancy = 0.65,
             vibrancy_darkness = 0.35,
+            
         },
     },
     general = {
         border_size = 2,
+        gaps_in = 4,
         gaps_out = 7,
         snap = {
             enabled = true,

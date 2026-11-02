@@ -87,3 +87,6 @@ require("dms.input")
 require("dms.binds")
 require("dms.binds-user")
 require("dms.windowrules")
+
+-- HyprMod managed settings
+require("hyprland-gui")

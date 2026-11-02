@@ -246,7 +246,7 @@
   "currentThemeCategory": "dynamic",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-vibrant",
-  "popupTransparency": 0.48,
+  "popupTransparency": 0.47,
   "foregroundLayerTransparency": 0.55,
   "blurBorderEnabled": true,
   "blurEnabled": true,
@@ -541,5 +541,7 @@
   "radiusMode": "scale",
   "terminalOpacity": 46,
   "terminalPalette": "medium",
-  "notepadAutoSave": true
+  "notepadAutoSave": true,
+  "blurForegroundLayers": true,
+  "floatingWindowSyncGlobal": true
 }
