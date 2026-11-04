@@ -77,7 +77,7 @@
       "id": "default",
       "name": "Main Bar",
       "enabled": true,
-      "position": 2,
+      "position": 0,
       "screenPreferences": [
         "all"
       ],
@@ -89,7 +89,8 @@
         },
         {
           "id": "cpuUsage",
-          "enabled": true
+          "enabled": false,
+          "minimumWidth": true
         },
         "workspaceSwitcher",
         {
@@ -102,9 +103,17 @@
         }
       ],
       "centerWidgets": [
+        {
+          "id": "cpuUsage",
+          "enabled": true
+        },
         "music",
         "clock",
-        "weather"
+        "weather",
+        {
+          "id": "dankKDEConnect",
+          "enabled": true
+        }
       ],
       "rightWidgets": [
         {
@@ -118,19 +127,15 @@
           "trayUseInlineExpansion": false
         },
         {
+          "id": "easyEffects",
+          "enabled": true
+        },
+        {
           "id": "syncshell",
           "enabled": true
         },
         {
-          "id": "clipboard",
-          "enabled": false
-        },
-        {
           "id": "cpuUsage",
-          "enabled": false
-        },
-        {
-          "id": "memUsage",
           "enabled": false
         },
         {
@@ -258,8 +263,8 @@
   "currentThemeCategory": "dynamic",
   "matugenSpec": "2025",
   "matugenScheme": "scheme-vibrant",
-  "popupTransparency": 0.5,
-  "foregroundLayerTransparency": 0.58,
+  "popupTransparency": 0.52,
+  "foregroundLayerTransparency": 0.59,
   "blurBorderEnabled": true,
   "blurEnabled": true,
   "blurBorderSeeded": true,
@@ -360,7 +365,89 @@
       "weekends": true
     },
     "weather": {
-      "city": true
+      "city": true,
+      "widgets": [
+        {
+          "id": "conditions",
+          "w": 2,
+          "h": 2,
+          "tone": "primary",
+          "city": false,
+          "col": 0,
+          "row": 0
+        },
+        {
+          "id": "hourly",
+          "w": 2,
+          "h": 2,
+          "forecast": "chart",
+          "col": 2,
+          "row": 0
+        },
+        {
+          "id": "sun",
+          "w": 1,
+          "h": 2,
+          "tone": "",
+          "col": 1,
+          "row": 4
+        },
+        {
+          "id": "moon",
+          "w": 1,
+          "h": 2,
+          "tone": "",
+          "col": 2,
+          "row": 4
+        },
+        {
+          "id": "humidity",
+          "w": 1,
+          "h": 2,
+          "graphics": true,
+          "tone": "",
+          "col": 0,
+          "row": 4
+        },
+        {
+          "id": "wind",
+          "w": 1,
+          "h": 2,
+          "graphics": true,
+          "tone": "",
+          "col": 3,
+          "row": 4
+        },
+        {
+          "id": "daily",
+          "w": 2,
+          "h": 2,
+          "forecast": "chart",
+          "col": 0,
+          "row": 2
+        },
+        {
+          "id": "precipitation",
+          "w": 1,
+          "h": 2,
+          "graphics": true,
+          "tone": "",
+          "col": 2,
+          "row": 2
+        },
+        {
+          "id": "pressure",
+          "w": 1,
+          "h": 2,
+          "graphics": true,
+          "tone": "",
+          "col": 3,
+          "row": 2
+        }
+      ]
+    },
+    "media": {
+      "lyrics": false
     }
   },
   "systemTrayIconTintMode": "none",
@@ -421,7 +508,7 @@
       "h": 1,
       "deviceName": "ddc:i2c-4",
       "col": 0,
-      "row": 1
+      "row": 2
     },
     {
       "id": "volumeSlider",
@@ -429,18 +516,10 @@
       "w": 4,
       "h": 1,
       "col": 0,
-      "row": 2
-    },
-    {
-      "id": "wifi",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
       "row": 3
     },
     {
-      "id": "audioOutput",
+      "id": "wifi",
       "enabled": true,
       "w": 4,
       "h": 1,
@@ -461,23 +540,23 @@
       "w": 2,
       "h": 1,
       "col": 0,
-      "row": 5
+      "row": 1
     },
     {
       "id": "nightMode",
       "enabled": true,
       "w": 2,
       "h": 1,
-      "col": 2,
-      "row": 5
+      "col": 4,
+      "row": 1
     },
     {
       "id": "doNotDisturb",
       "enabled": true,
       "w": 2,
       "h": 1,
-      "col": 4,
-      "row": 2
+      "col": 2,
+      "row": 1
     },
     {
       "id": "idleInhibitor",
@@ -485,7 +564,7 @@
       "w": 2,
       "h": 1,
       "col": 6,
-      "row": 2
+      "row": 1
     },
     {
       "id": "battery",
@@ -493,24 +572,26 @@
       "w": 4,
       "h": 1,
       "col": 4,
-      "row": 5
+      "row": 4
     },
     {
       "id": "diskUsage",
       "enabled": true,
       "w": 4,
       "h": 1,
-      "col": 4,
-      "row": 4
+      "col": 0,
+      "row": 7,
+      "small": true,
+      "mountPath": "/"
     },
     {
       "id": "runningApps",
       "enabled": true,
-      "w": 3,
+      "w": 7,
       "h": 1,
       "small": true,
-      "col": 4,
-      "row": 6
+      "col": 0,
+      "row": 8
     },
     {
       "id": "edit",
@@ -519,7 +600,7 @@
       "h": 1,
       "small": true,
       "col": 7,
-      "row": 6
+      "row": 8
     },
     {
       "id": "brightnessSlider",
@@ -529,15 +610,40 @@
       "instanceId": "mvyk7e2rjjjoscs8qsz1ihuhdxojq",
       "deviceName": "ddc:i2c-3",
       "col": 4,
-      "row": 1
+      "row": 2
     },
     {
       "id": "builtin_tailscale",
       "enabled": true,
       "w": 4,
       "h": 1,
+      "col": 4,
+      "row": 5
+    },
+    {
+      "id": "plugin_quickCapture",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 5
+    },
+    {
+      "id": "plugin_easyEffects",
+      "enabled": true,
+      "w": 8,
+      "h": 1,
       "col": 0,
       "row": 6
+    },
+    {
+      "id": "plugin_dankKDEConnect",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 4,
+      "row": 7,
+      "small": true
     }
   ],
   "springBounce": 1,
@@ -568,5 +674,56 @@
   "hyprlandTilingLayout": "",
   "fadeToLockEnabled": true,
   "weatherEnabled": true,
-  "matugenTemplateFoot": true
+  "matugenTemplateFoot": true,
+  "dashCards": [
+    {
+      "id": "clock",
+      "w": 2,
+      "h": 1,
+      "col": 0,
+      "row": 0
+    },
+    {
+      "id": "weather",
+      "w": 1,
+      "h": 1,
+      "col": 2,
+      "row": 0
+    },
+    {
+      "id": "notifications",
+      "w": 3,
+      "h": 4,
+      "col": 3,
+      "row": 0
+    },
+    {
+      "id": "calendar",
+      "w": 3,
+      "h": 3,
+      "col": 0,
+      "row": 1
+    },
+    {
+      "id": "media",
+      "w": 3,
+      "h": 1,
+      "col": 0,
+      "row": 4
+    },
+    {
+      "id": "sysmon",
+      "w": 2,
+      "h": 1,
+      "col": 3,
+      "row": 4
+    },
+    {
+      "id": "disk",
+      "w": 1,
+      "h": 1
+    }
+  ],
+  "avatarRing": "secondary",
+  "audioVisualizerEnabled": false
 }

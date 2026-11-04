@@ -5,5 +5,30 @@
   "dankHooks": {
     "enabled": true,
     "wallpaperPath": "/home/sam/.config/dms/postwall.sh"
+  },
+  "easyEffects": {
+    "enabled": true
+  },
+  "dcalTasks": {
+    "enabled": true,
+    "defaultCalendarId": "9b2ab1fe-344d-4eb6-bde9-2d8500c67eca"
+  },
+  "quickCapture": {
+    "enabled": true,
+    "recordSystemAudio": false
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "dankActions": {
+    "enabled": true
+  },
+  "com.dms.plugin.localsend": {
+    "enabled": false
+  },
+  "dankKDEConnect": {
+    "enabled": true,
+    "selectedDeviceId": "fd0155df61db40289babcd8b71a3eb5b"
   }
 }

@@ -6,6 +6,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprland-session.target")
 	hl.exec_cmd("sh -c 'touch /run/user/$(id -u)/caelestia-ready'")
 	hl.exec_cmd("/home/sam/.local/bin/dpms-guard.sh")
+	hl.exec_cmd("flatpak run com.cassidyjames.butler", { workspace = "special silent" })
+    hl.exec_cmd("/home/sam/.local/bin/Music.Assistant_0.6.8_amd64.AppImage", { workspace = "special:music silent" })
 end)
 -- DMS_STARTUP_END
 
@@ -80,6 +82,11 @@ hl.window_rule({
 hl.window_rule({ match = { class = "^(zoom)$" }, float = true })
 hl.layer_rule({ match = { namespace = "^(quickshell)$" }, no_anim = true })
 hl.layer_rule({ match = { namespace = "^dms:.*" }, no_anim = true })
+
+
+hl.workspace_rule({ workspace = "1", monitor = "DP-1" })
+hl.bind("SUPER + ALT + F12", hl.dsp.exec_cmd("/home/sam/.local/bin/reload_dms.sh"))
+
 
 require("dms.colors")
 require("dms.outputs")
