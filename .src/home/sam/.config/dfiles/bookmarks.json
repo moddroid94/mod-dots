@@ -50,16 +50,6 @@
    "path": "recent:///",
    "label": "recent",
    "icon": ""
-  },
-  {
-   "path": "/run/user/1000/gvfs/sftp:host=192.168.178.21",
-   "label": "sftp:host=192.168.178.21",
-   "icon": ""
-  },
-  {
-   "path": "/run/user/1000/gvfs/sftp:host=192.168.178.54",
-   "label": "sftp:host=192.168.178.54",
-   "icon": ""
   }
  ]
 }

@@ -135,18 +135,6 @@
           "enabled": true
         },
         {
-          "id": "cpuUsage",
-          "enabled": false
-        },
-        {
-          "id": "notificationButton",
-          "enabled": false
-        },
-        {
-          "id": "battery",
-          "enabled": false
-        },
-        {
           "id": "controlCenterButton",
           "enabled": true,
           "showBrightnessIcon": false,
@@ -725,5 +713,8 @@
     }
   ],
   "avatarRing": "secondary",
-  "audioVisualizerEnabled": false
+  "audioVisualizerEnabled": false,
+  "spotlightSectionViewModes": {
+    "apps": "list"
+  }
 }
